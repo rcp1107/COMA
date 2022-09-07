@@ -2,7 +2,7 @@
 {
     public class clientes
     {
-        public int Id { get; set; }
+        public int Id { get; set; }//En este apartado creamos los atributos el Id como clave primaria   
         public string nombre { get; set; }
         public string apellido { get; set; }
         public int edad { get; set; }

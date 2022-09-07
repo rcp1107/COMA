@@ -22,7 +22,9 @@ namespace COMA
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "COMA_TEST", Version = "v1" });
             });
+            
             services.AddDbContext<ApplicationDbContext>(
+                //SE accede a la cadena de cpnexión de appsetting.json
                  options => options.UseSqlServer(Configuration.GetConnectionString("Conexion")));
         }
 

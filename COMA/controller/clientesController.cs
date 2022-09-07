@@ -21,7 +21,7 @@ namespace COMA.controller
             _context = context;
         }
 
-        // GET: api/clientes
+        // GET: api/clientes. Permite enlistar los datos de la base de datos
         [HttpGet]
         public async Task<ActionResult<IEnumerable<clientes>>> Getclientes()
         {
@@ -32,7 +32,7 @@ namespace COMA.controller
             return await _context.clientes.ToListAsync();
         }
 
-        // GET: api/clientes/5
+        // GET: api/clientes/ Permite realizar una consulta de un id en particular
         [HttpGet("{id}")]
         public async Task<ActionResult<clientes>> Getclientes(int id)
         {
@@ -50,7 +50,7 @@ namespace COMA.controller
             return clientes;
         }
 
-        // PUT: api/clientes/5
+        // PUT: api/clientes/ actualizar  dato en la tabla con id en particular
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> Putclientes(int id, clientes clientes)
@@ -81,7 +81,7 @@ namespace COMA.controller
             return NoContent();
         }
 
-        // POST: api/clientes
+        // POST: api/clientes. Permite insertar nuevo dato 
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<clientes>> Postclientes(clientes clientes)
@@ -96,7 +96,7 @@ namespace COMA.controller
             return CreatedAtAction("Getclientes", new { id = clientes.Id }, clientes);
         }
 
-        // DELETE: api/clientes/5
+        // DELETE: api/clientes/ Permite eliminar un id en particualar
         [HttpDelete("{id}")]
         public async Task<IActionResult> Deleteclientes(int id)
         {

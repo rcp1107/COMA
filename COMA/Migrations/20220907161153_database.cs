@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
-
+//SE genera base de datos con migración
 namespace COMA.Migrations
 {
     public partial class database : Migration
-    {
+    {//En el método up se crea la tabla clientes así como sus columnas
+
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
